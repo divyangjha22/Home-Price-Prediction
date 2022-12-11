@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Price Calculator</title>
+    <script src="app.js"></script>
+	
+	<link rel="stylesheet" href="app.css">
+	<body>
+				<!-- **********************Navigation Bar***************************** -->
+		<nav class="navbar">
+			<div class="max-width">
+				<img src="../Images/Logo.jpg" alt="My Logo" class="logo">
+				<ul class="menu">
+					<li><a href="./Index.html" class="menu-btn">Home</a></li>
+					<li><a href="./About.html" class="menu-btn">About</a></li>
+					<li><a href="./Projects.html" class="menu-btn">Projects</a></li>
+					<li><a href="./Skills.html" class="menu-btn">Skills</a></li>
+					<li><a href="./Contact.html" class="menu-btn">Contact</a></li>
+				</ul>
+				<div class="menu-btn">
+					<i class="fas fa-bars"></i>
+					<!--By this we create a hamburger icon-->
+				</div>
+			</div>
+		</nav>
+
+			<!-- **********************Calculator***************************** -->
+		<div class="img"></div>
+		<form class="form">
+			<div class="flex">
+				<div>
+					<h2>Area (Square Feet)</h2>
+						<input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+				</div>
+				<div class="loc">
+					<h2>Location</h2>
+					<select class="location" name="" id="uiLocations">
+						<option value="" disabled="disabled" selected="selected">Choose a Location</option>
+						<option>Electronic City</option>
+						<option>Rajaji Nagar</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="flex">
+				<div>
+					<h2>Bath</h2>
+					<div class="switch-field">
+						<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+						<label for="radio-bath-1">1</label>
+						<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+						<label for="radio-bath-2">2</label>
+						<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+						<label for="radio-bath-3">3</label>
+						<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+						<label for="radio-bath-4">4</label>
+						<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+						<label for="radio-bath-5">5</label>
+					</div>
+				</div>
+				<div>
+					<h2>BHK</h2>
+					<div class="switch-field">
+						<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+						<label for="radio-bhk-1">1</label>
+						<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+						<label for="radio-bhk-2">2</label>
+						<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+						<label for="radio-bhk-3">3</label>
+						<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+						<label for="radio-bhk-4">4</label>
+						<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+						<label for="radio-bhk-5">5</label>
+					</div>
+				</div>
+			</div>
+			<div class="btn">
+				<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+				<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+			</div>
+		</form>
+
+				<!-- **************************Footer-Section****************** -->
+			<footer class="section-footer section">
+				<div class="container grid grid-four-column">
+					<div class="f-about">
+						<h3>About</h3>
+						<p>A highly hard-working, responsible and adaptable individual looking for a responsible position in a reputable organization to utilize my technical, and management skills for the growth of the organization as well as to enhance my knowledge about new and emerging trends in the IT sector.</p>
+					</div>
+					<div class="f-links">
+						<h3>Links</h3>
+						<ul>
+							<li>
+								<span>
+									<ion-icon name="arrow-forward-outline"></ion-icon>
+								</span>
+								<a href="./Index.html">Home</a>
+							</li>
+							<li>
+								<span>
+									<ion-icon name="arrow-forward-outline"></ion-icon>
+								</span>
+								<a href="./About.html">About</a>
+							</li>
+							<li>
+								<span>
+									<ion-icon name="arrow-forward-outline"></ion-icon>
+								</span>
+								<a href="./Projects.html">Projects</a>
+							</li>
+							<li>
+								<span>
+									<ion-icon name="arrow-forward-outline"></ion-icon>
+								</span>
+								<a href="./Skills.html">Skills</a>
+							</li>
+							<li>
+								<span>
+									<ion-icon name="arrow-forward-outline"></ion-icon>
+								</span>
+								<a href="./Contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="f-address">
+						<h3>Have a Question?</h3>
+						<address>
+							<div>
+								<p>
+									<span>
+										<ion-icon name="location-outline"></ion-icon>
+									</span>
+									Jaipur,Rajasthan
+								</p>
+							</div>
+							<div>
+								<p>
+									<span>
+										<ion-icon name="call-outline"></ion-icon>
+									</span>
+									<a href="tel:+917737428543">+91 7737428543</a>
+								</p>
+							</div>
+							<div>
+								<p>
+									<span>
+										<ion-icon name="call-outline"></ion-icon>
+									</span>
+									<a href="tel:+918890624369">+91 8890624369</a>
+								</p>
+							</div>
+							<div>
+								<p>
+									<span>
+										<ion-icon name="mail-outline"></ion-icon>
+									</span>
+									<a href="mailto:divyangjha22@gmail.com">divyangjha22@gmail.com</a>
+								</p>
+							</div>
+						</address>
+					</div>
+				</div>
+				<div class="container">
+					<div class="f-social-icons">
+						<a href="https://www.instagram.com/divyang_2222/" target="blank">
+							<ion-icon class="icons" name="logo-instagram"></ion-icon>
+						</a>
+						<a href="https://www.linkedin.com/in/divyang-jha-6b3451201/" target="blank">
+							<ion-icon class="icons" name="logo-linkedin"></ion-icon>
+						</a>
+						<a href="https://github.com/divyangjha22" target="blank">
+							<ion-icon class="icons" name="logo-github"></ion-icon>
+						</a>
+						<a href="https://www.facebook.com/divyang.jha.10" target="blank">
+							<ion-icon class="icons" name="logo-facebook"></ion-icon>
+						</a>
+						<a href="https://twitter.com/jha_divyang" target="blank">
+							<ion-icon class="icons" name="logo-twitter"></ion-icon>
+						</a>
+					</div>
+					<div class="f-credits">
+						<p>
+							Copyright ©️ 2022 All rights reserved.
+						</p>
+					</div>
+				</div>
+			</footer>
+			    <!-- For Icons -->
+				<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	</body>
+</html>
